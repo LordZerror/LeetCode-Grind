@@ -17,14 +17,11 @@ class Solution:
         #         return False
         check = []
         n = str(n)
-
         while True:
             total = 0
-            
 			# Taking the the number and sum of the squares of its digits, storing the result in 'total'
             for i in n:
                 total += int(i) * int(i)
-                
 			# Checking if 'total' is the happy number
             if total == 1:
                 return True

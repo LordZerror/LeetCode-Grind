@@ -7,9 +7,17 @@ class Solution:
         #     if ans[i] > 1:
         #         return i
         
-        seen = set()
+        # seen = set()
+        # for i in nums:
+        #     if i in seen:
+        #         return i
+        #     else:
+        #         seen.add(i)
+        
+        seen = {}
         for i in nums:
             if i in seen:
                 return i
             else:
-                seen.add(i)
+                seen[i] = 1
+        return -1

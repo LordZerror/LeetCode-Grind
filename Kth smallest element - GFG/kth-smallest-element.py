@@ -11,8 +11,11 @@ class Solution:
         '''
         # arr.sort()
         # return arr[k-1]
-        ans = heapq.nsmallest(k, arr)
-        return ans[-1]
+        # ans = heapq.nsmallest(k, arr)
+        # return ans[-1]
+        
+        arr.sort()
+        return arr[k-1]
 
 #{ 
 #  Driver Code Starts

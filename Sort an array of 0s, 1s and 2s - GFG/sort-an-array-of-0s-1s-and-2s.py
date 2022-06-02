@@ -1,5 +1,5 @@
 #User function Template for python3
-from collections import Counter
+# from collections import Counter
 
 class Solution:
     def sort012(self,l1,n):
@@ -21,14 +21,25 @@ class Solution:
         # ls += [1]*count_one
         # ls += [2]*count_two
         # return ls
-        zero=l1.count(0)
-        one=l1.count(1)
-        two=l1.count(2)
-        l1.clear() 
-        l1+=[0]*zero
-        l1+=[1]*one
-        l1+=[2]*two
-        return l1 
+        # zero=l1.count(0)
+        # one=l1.count(1)
+        # two=l1.count(2)
+        # l1.clear() 
+        # l1+=[0]*zero
+        # l1+=[1]*one
+        # l1+=[2]*two
+        # return l1 
+        zero = []
+        one = []
+        two = []
+        for i in l1:
+            if i == 0:
+                zero.append(0)
+            elif i == 1:
+                one.append(1)
+            else:
+                two.append(2)
+        arr[:] = zero + one + two
 
 #{ 
 #  Driver Code Starts

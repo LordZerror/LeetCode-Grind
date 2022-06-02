@@ -2,10 +2,12 @@
 # Function should return True/False or 1/0
 def PalinArray(arr ,n):
     # Code here
+    check = True
     for i in arr:
         if str(i) != str(i)[::-1]:
+            check = False
             return 0
-    return 1
+    return 1 if check == True else 0
 
 
 #{ 

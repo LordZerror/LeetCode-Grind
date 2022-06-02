@@ -3,10 +3,16 @@
 class Solution:    
     #Function to return the count of number of elements in union of two arrays.
     def doUnion(self,a,n,b,m):
-        a_set = set(a)
-        b_set = set(b)
-        ans = list(a_set.union(b_set))
-        return len(ans)
+        # a_set = set(a)
+        # b_set = set(b)
+        # ans = list(a_set.union(b_set))
+        # return len(ans)
+        seen = set()
+        for i in a:
+            seen.add(i)
+        for i in b:
+            seen.add(i)
+        return len(seen)
         #code here
 
 #{ 

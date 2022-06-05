@@ -1,7 +1,11 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        ls = {}
-        for i in set(nums):
-            ls[i] = nums.count(i)
+        dict = {}
+        for i in nums:
+            if i not in dict:
+                dict[i] = 1
+            else:
+                dict[i] += 1
+        value = max(dict, key=dict.get)
+        return value
         
-        return max(ls, key=ls.get)

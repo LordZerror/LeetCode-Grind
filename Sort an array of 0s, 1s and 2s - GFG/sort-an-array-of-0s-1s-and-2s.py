@@ -15,7 +15,10 @@ class Solution:
         #     else:
         #         two.append(2)
         # arr[:] = zero + one + two
+        
         l1[:] = sorted(l1)
+        
+        
 
 #{ 
 #  Driver Code Starts

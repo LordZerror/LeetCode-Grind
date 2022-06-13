@@ -1,14 +1,15 @@
 #User function Template for python3
 
-def rotate( ls, n):
+def rotate(arr, n):
     # nums = ls.copy()
     # for i in range(n):
     #     ls[i] = nums[(i+n-1)%n]
     
-    ls.insert(0, ls[-1])
-    ls.pop(-1)
+    # ls.insert(0, ls[-1])
+    # ls.pop(-1)
     # return ls
     
+    arr[:] = [arr[-1]] + arr[:len(arr) - 1]
 
 
 #{ 

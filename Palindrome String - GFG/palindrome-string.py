@@ -1,8 +1,16 @@
 #User function Template for python3
 class Solution:
-	def isPalindrome(self, S):
+	def isPalindrome(self, s):
 		# code here
-		return 1 if S == S[::-1] else 0
+		n = len(s)
+		condition = True
+		for i in range(n // 2):
+		    if s[i] != s[n - i - 1]:
+		        condition = False
+		        break
+		   
+		return 1 if condition else 0
+# 		return 1 if S == S[::-1] else 0
 
 #{ 
 #  Driver Code Starts

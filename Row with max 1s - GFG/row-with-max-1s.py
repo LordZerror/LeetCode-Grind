@@ -3,13 +3,15 @@ class Solution:
 
 	def rowWithMax1s(self,arr, n, m):
 		# code here
-		ans = []
-        for i in arr:
-            ans.append(sum(i))
-        
-        if len(set(ans)) == 1 and 0 in ans:
-            return -1
-        return ans.index(max(ans))
+		index = -1
+		currMax = 0
+		for i in range(n):
+		    if sum(arr[i]) > currMax:
+		        currMax = sum(arr[i])
+		        index = i
+		 
+	    return index
+		    
 
 #{ 
 #  Driver Code Starts

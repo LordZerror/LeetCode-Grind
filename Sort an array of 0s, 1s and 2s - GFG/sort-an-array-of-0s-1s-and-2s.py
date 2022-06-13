@@ -2,7 +2,7 @@
 # from collections import Counter
 
 class Solution:
-    def sort012(self,l1,n):
+    def sort012(self,arr,n):
         # code here
         # zero = []
         # one = []
@@ -16,7 +16,22 @@ class Solution:
         #         two.append(2)
         # arr[:] = zero + one + two
         
-        l1[:] = sorted(l1)
+        # arr[:] = sorted(arr)
+        
+        low = 0
+        mid = 0
+        high = len(arr) - 1
+
+        while mid <= high:
+            if arr[mid] == 0:
+                arr[low], arr[mid] = arr[mid], arr[low]
+                low += 1
+                mid += 1
+            elif arr[mid] == 1:
+                mid += 1
+            else:
+                arr[high], arr[mid] = arr[mid], arr[high]
+                high -= 1
         
         
 
